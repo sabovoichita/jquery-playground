@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jQuery Playground</title>
+    <title>Button Animation</title>
 
     <link
       rel="stylesheet"
@@ -17,28 +17,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.4.min.js"
-      integrity="sha384-oQH4+ulD9SiG7gy6jJo7ONewTH6+sHNF5xU7U8zH2CjzjXQEmxYU9biGNY59Z4r2"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      $(document).ready(function () {
-        $("button").addClass("animate__animated animate__bounce");
-      });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -58,14 +37,15 @@
             </button>
           </div>
         </div>
-
         <div class="col-6">
           <h4>#right-well</h4>
           <div class="well" id="right-well">
             <button class="btn btn-default target" id="target4">
               #target4
             </button>
-            <button class="btn btn-defaut target" id="target5">#target5</button>
+            <button class="btn btn-default target" id="target5">
+              #target5
+            </button>
             <button class="btn btn-default target" id="target6">
               #target6
             </button>
@@ -73,5 +53,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        $("button").addClass(
+          "animate__animated animate__bounce animate__shakeX"
+        );
+      });
+    </script>
   </body>
 </html>
